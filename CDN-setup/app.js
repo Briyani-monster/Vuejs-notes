@@ -1,4 +1,9 @@
 const app = Vue.createApp({
-  template: "<h2>i m from vue</h2>",
+  data() {
+    return {
+      title: "Buddy of dawn",
+      author: "Ravi keshav",
+    };
+  },
 });
 app.mount("#root");
