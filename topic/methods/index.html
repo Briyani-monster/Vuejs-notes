@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>{{count}}</h1>
+        <!--directive and functions inside html-->
+        <button v-on:click="count++">increment</button>
+        <!--short cut of using directive-->
+        <button @click="count--">decrement</button>
+        <br>
+        <!--directive and functions from js-->
+        <button @click="changeTitle">{{title}}</button>
+        <!--directive and functions from js-->
+        <h6>{{author}}</h6>
+        <button @click="changeAuthor('author changed via js')">change author</button>
+    </div>
+    <h1>Hello This is Vue</h1>
+    <script src="./app.js"></script>
+</body>
+</html>
