@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <button @click="handleChange">toggle</button>
+        <h1 v-if="isShowing">Vue is Showing</h1>
+        <h1 v-else>oh No :)</h1>
+
+        <h1>
+            <p v-if="age<=18">below 18 year</p>
+            <p v-else-if="age>18&&age<=30">between 18 to 30 year</p>
+            <p v-else="age>30">above 30 year</p> 
+            <p v-show="!isNotVisible">AGE: {{age}}</p>
+        </h1>
+        <button @click="age++">age Increment</button>
+        <button @click="age--">age decrement</button>
+        <button @click="toggleChange">hide</button>
+    </div>
+    <h1>Hello This is Vue</h1>
+    <script src="./app.js"></script>
+</body>
+</html>
