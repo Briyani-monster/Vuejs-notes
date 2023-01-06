@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        
+        <div class="box" @mouseenter="handleEnter" >mouse {{entered?"entered":"not entered"}}</div>
+        <div class="box" @mouseleave="handleLeft">mouse {{left?"left":"not left"}}</div>
+        <div class="box" @mouseover="handleOver">mouse {{over?"over":"not over"}}</div>
+        <div class="box"  @dblclick="handleDblClick">mouse {{dblclick?"dbl click":"not dbl Click"}}</div>
+        <div class="box" @mousemove="handleMousemove">mouse pos x:{{x}}, y:{{y}}</div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
