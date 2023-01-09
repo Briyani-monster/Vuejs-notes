@@ -4,7 +4,7 @@ normal props string directly write.
 if any variable then :propName
 event handle
 modifier event : @click.self and @click.shift
-
+Teleport added
 
 
 ## Project setup

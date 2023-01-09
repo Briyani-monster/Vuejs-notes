@@ -1,11 +1,13 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
+
     <AsModal :showModal="showModal" @close="toggleModal" theme="danger">
       <template v-slot:links><a href="#">hello</a></template>
       <h1>Title</h1>
       <h2>Text description</h2>
     </AsModal>
+
     <button @click="toggleModal">show modal</button>
   </div>
 </template>
@@ -39,5 +41,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  height: 100vh;
 }
 </style>

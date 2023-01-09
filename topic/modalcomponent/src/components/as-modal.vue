@@ -1,21 +1,23 @@
 <template>
-  <div v-show="showModal">
-    <div class="backdrop" @click.self="closeModal">
-      <div
-        class="modal"
-        :class="{
-          danger: theme === modalTheme.danger,
-          success: theme === modalTheme.success,
-          neutral: theme === modalTheme.neutral,
-        }"
-      >
-        <slot>default slot</slot>
-        <div class="actions">
-          <slot name="links"></slot>
+  <Teleport to="#modals">
+    <div v-show="showModal">
+      <div class="backdrop" @click.self="closeModal">
+        <div
+          class="modal"
+          :class="{
+            danger: theme === modalTheme.danger,
+            success: theme === modalTheme.success,
+            neutral: theme === modalTheme.neutral,
+          }"
+        >
+          <slot>default slot</slot>
+          <div class="actions">
+            <slot name="links"></slot>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <script>
@@ -57,6 +59,10 @@ export default {
   border-radius: 5px;
   min-width: 300px;
   min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 .modal.neutral {
   background-color: skyblue;
