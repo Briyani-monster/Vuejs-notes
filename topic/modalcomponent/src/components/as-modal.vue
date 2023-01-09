@@ -1,6 +1,6 @@
 <template>
   <Teleport to="#modals">
-    <div v-show="showModal">
+    <div v-if="showModal">
       <div class="backdrop" @click.self="closeModal">
         <div
           class="modal"
